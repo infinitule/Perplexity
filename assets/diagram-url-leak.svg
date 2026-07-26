@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-label="F-02: the upgrade link carries the full prompt and the profile URL into history, headers, logs, and shared copies">
+  <defs>
+    <linearGradient id="u_paper" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="#fcfaf6"/><stop offset="1" stop-color="#f4efe5"/></linearGradient>
+    <style>
+      .serif{font-family:Georgia,'Times New Roman',serif}
+      .sans {font-family:'Helvetica Neue',Helvetica,sans-serif}
+      .mono {font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace}
+    </style>
+    <marker id="u_tick" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto"><path d="M4 0 V7" stroke="#b0553c" stroke-width="1.4"/></marker>
+  </defs>
+
+  <rect width="1200" height="520" fill="url(#u_paper)"/>
+  <rect x="0.5" y="0.5" width="1199" height="519" fill="none" stroke="#e3dccf"/>
+
+  <text x="56" y="66" class="serif" font-size="30" fill="#211c16">F-02 — the link carries more than a click</text>
+  <text x="56" y="92" class="sans" font-size="14" fill="#7a7164">A URL is the leakiest place to put anything. This one holds the whole product prompt, and your profile URL with it.</text>
+
+  <!-- the href -->
+  <text x="56" y="140" class="mono" font-size="11.5" letter-spacing="1.5" fill="#17838d">THE “UNLOCK WORKFLOW” HREF</text>
+  <rect x="56" y="152" width="1088" height="52" rx="8" fill="#fbf8f2" stroke="#e6dfd2"/>
+  <text x="74" y="184" class="mono" font-size="13.5">
+    <tspan fill="#8a8175">/pro/payment?plan=yearly&amp;origin=computerLanding&amp;</tspan><tspan fill="#17838d" font-weight="700">redirect_path=…%26qfill=</tspan><tspan fill="#b0553c" font-weight="700">&lt;the whole prompt, + your-linkedin-url&gt;</tspan>
+  </text>
+
+  <!-- decode -->
+  <line x1="120" y1="204" x2="120" y2="236" stroke="#c9b7a0" stroke-width="1.4" marker-end="url(#u_tick)"/>
+  <text x="150" y="232" class="sans" font-style="italic" font-size="13.5" fill="#7a7164">decode the nested qfill and it is the full workflow prompt, verbatim:</text>
+
+  <rect x="56" y="248" width="1088" height="86" rx="8" fill="#ffffff" stroke="#efe9df"/>
+  <rect x="56" y="248" width="4" height="86" fill="#d7b48f"/>
+  <text x="80" y="278" class="serif" font-style="italic" font-size="14.5" fill="#3a342b">“Go to linkedin.com/in/<tspan class="mono" font-style="normal" fill="#b0553c">&lt;your-linkedin-url&gt;</tspan> and analyze my profile — extract experience, skills, titles, education.</text>
+  <text x="80" y="302" class="serif" font-style="italic" font-size="14.5" fill="#3a342b">Then search the job boards, tailor my resume to each role, write cover letters, and compile every application</text>
+  <text x="80" y="326" class="serif" font-style="italic" font-size="14.5" fill="#3a342b">into a live tracking spreadsheet.”</text>
+
+  <!-- travels -->
+  <text x="56" y="382" class="sans" font-size="15" fill="#211c16" font-weight="600">And because it lives in a URL, it travels —</text>
+  <g class="sans">
+    <g transform="translate(56,398)">
+      <text x="0" y="20" font-size="14" fill="#2a241d">browser history</text>
+      <text x="0" y="40" class="mono" font-size="11" fill="#9a9184">synced across devices</text>
+    </g>
+    <line x1="252" y1="400" x2="252" y2="440" stroke="#e3dccf"/>
+    <g transform="translate(284,398)">
+      <text x="0" y="20" font-size="14" fill="#2a241d">Referer headers</text>
+      <text x="0" y="40" class="mono" font-size="11" fill="#9a9184">sent to third-party origins</text>
+    </g>
+    <line x1="536" y1="400" x2="536" y2="440" stroke="#e3dccf"/>
+    <g transform="translate(568,398)">
+      <text x="0" y="20" font-size="14" fill="#2a241d">analytics &amp; CDN logs</text>
+      <text x="0" y="40" class="mono" font-size="11" fill="#9a9184">plaintext, indefinitely</text>
+    </g>
+    <line x1="820" y1="400" x2="820" y2="440" stroke="#e3dccf"/>
+    <g transform="translate(852,398)">
+      <text x="0" y="20" font-size="14" fill="#2a241d">anything you paste it into</text>
+      <text x="0" y="40" class="mono" font-size="11" fill="#9a9184">verbatim, PII and all</text>
+    </g>
+  </g>
+
+  <!-- fix -->
+  <line x1="56" y1="466" x2="1144" y2="466" stroke="#e3dccf"/>
+  <text x="56" y="496" class="sans" font-size="14" fill="#7a7164">
+    <tspan class="serif" font-style="italic" font-size="15" fill="#211c16">The fix — </tspan>hand the redirect a server-side template id (<tspan class="mono" fill="#3f7a5a" font-size="13">?tmpl=job-pipeline</tspan>) and keep the profile URL out of the query string entirely.
+  </text>
+</svg>
